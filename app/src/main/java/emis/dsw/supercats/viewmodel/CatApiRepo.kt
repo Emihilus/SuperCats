@@ -10,7 +10,7 @@ class CatApiRepo() {
     suspend fun getRndCatsCall(): HttpResponse {
         val client = HttpClient(CIO)
         val response: HttpResponse =
-            client.get("https://api.thecatapi.com/v1/images/search?limit=20")
+            client.get("https://api.thecatapi.com/v1/images/search?limit=10")
         client.close()
         return response
     }
